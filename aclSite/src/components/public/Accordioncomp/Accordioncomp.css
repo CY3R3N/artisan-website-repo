@@ -1,0 +1,27 @@
+.accordion-item {
+  border: 0;
+  border-bottom: 1px solid var(--border-light);
+  border-radius: 0 !important;
+}
+
+.accordion-item button {
+  border-radius: 0 !important;
+  background-color: var(--bg-color);
+  color: var(--text-dw);
+  font-weight: 700;
+  outline: none;
+  box-shadow: none;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.accordion-item button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--bg-color);
+  outline: none;
+  box-shadow: none;
+}

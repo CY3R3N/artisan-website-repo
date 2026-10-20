@@ -1,0 +1,10 @@
+/* .contact-info {
+  padding-top: 100px;
+  padding-bottom: 50px;
+} */
+
+.contact-info h1,
+.contact-info h5 {
+  color: var(--text);
+  font-weight: 700;
+}

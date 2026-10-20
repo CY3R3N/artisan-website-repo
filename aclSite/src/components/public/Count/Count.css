@@ -1,0 +1,50 @@
+.count {
+  padding-top: 100px;
+}
+
+.count-card {
+  padding: 40px 100px;
+  background-color: var(--frg-color-2);
+  border-radius: 20px;
+}
+
+.count-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-third);
+}
+
+.count-header h3 {
+  width: 40%;
+  margin-bottom: 0;
+}
+
+.count-header a {
+  background-color: var(--navy-blue-2);
+  padding: 12px 25px;
+  border-radius: 50px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.divider {
+  margin: 20px 0;
+  border: 0.12rem solid var(--navy-blue-2);
+  opacity: 0.8;
+}
+
+.c-card {
+  color: var(--text-third);
+}
+
+.c-card h1 {
+  font-weight: 800;
+}
+
+.c-card .c-desc {
+  margin-left: 15px;
+  padding-left: 15px;
+  border-left: 0.15rem solid var(--navy-blue-2);
+  opacity: 0.8;
+}

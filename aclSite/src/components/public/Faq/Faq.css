@@ -1,0 +1,14 @@
+.faq h5 {
+  color: var(--text-dw);
+}
+
+.faq h1 {
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 30px;
+}
+
+.faq p {
+  color: var(--text-dw);
+}

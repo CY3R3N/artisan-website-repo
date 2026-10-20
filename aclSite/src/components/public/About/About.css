@@ -1,0 +1,40 @@
+/* Our Story */
+.about-us {
+  padding: 100px 0 60px 0;
+}
+
+.our-story .our-story-img-wraper img {
+  width: 100%;
+  height: auto;
+}
+
+.component-title {
+  display: flex;
+  font-size: 50px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 25px;
+  width: fit-content;
+  height: 70px;
+  overflow: hidden;
+}
+
+.component-title .word,
+.component-title .jwu-word,
+.component-title .ju-word,
+.component-title .jut-word,
+.component-title .cm-word,
+.component-title .cu-word,
+.component-title .ne-word,
+.component-title .wh-word {
+  padding-right: 10px;
+}
+
+.about-us .story {
+  color: var(--text-dw);
+}
+
+.lead-text {
+  font-size: 20px;
+  font-weight: 600;
+}

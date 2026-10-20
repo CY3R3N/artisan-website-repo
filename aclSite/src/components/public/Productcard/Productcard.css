@@ -1,0 +1,21 @@
+.product-card .product-img {
+  width: 100%;
+  height: auto;
+}
+
+.p-title {
+  color: var(--text-dw);
+  font-weight: 700;
+}
+
+.p-card-body svg {
+  height: 30px;
+  width: auto;
+  fill: var(--border-color);
+}
+
+.p-card-body p {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-dw);
+}

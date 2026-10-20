@@ -1,0 +1,42 @@
+.qcard {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: all 1 ease-in-out;
+  cursor: pointer;
+}
+
+.qcard:hover {
+  background-color: var(--hover-bg);
+}
+
+.qcard .qcard-body {
+  padding: 20px;
+}
+
+.qcard .qcard-body .qcard-icon {
+  width: 80px;
+  height: 80px;
+  background-color: var(--frg-color-2);
+  color: var(--text-third);
+  border-radius: 6px;
+  margin-bottom: 30px;
+  text-align: center;
+  line-height: 80px;
+}
+
+.qcard .qcard-body .qcard-icon svg {
+  fill: var(--text-third);
+  width: 80%;
+  height: 80%;
+}
+
+.qcard .qcard-body .qcard-title {
+  font-weight: 600;
+  color: var(--text-dw);
+  margin-bottom: 15px;
+}
+
+.qcard .qcard-body .qcard-text {
+  color: var(--text-dw);
+}

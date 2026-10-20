@@ -1,0 +1,40 @@
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: acl_mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: ${DB_DATABASE:-artisan_db}
+      MYSQL_USER: ${DB_USERNAME:-artisan_user}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-secretpassword}
+      MYSQL_ROOT_PASSWORD: rootsecret
+    ports:
+      - "${FORWARD_DB_PORT:-3306}:3306"
+    volumes:
+      - acl_mysql_data:/var/lib/mysql
+    networks:
+      - acl_network
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: acl_phpmyadmin
+    restart: unless-stopped
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: rootsecret
+    ports:
+      - "8080:80"
+    depends_on:
+      - mysql
+    networks:
+      - acl_network
+
+volumes:
+  acl_mysql_data:
+    driver: local
+
+networks:
+  acl_network:
+    driver: bridge

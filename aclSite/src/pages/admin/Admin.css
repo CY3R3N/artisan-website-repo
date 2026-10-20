@@ -1,0 +1,325 @@
+/* Admin Dashboard & Management Styles */
+
+.admin-layout-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  color: var(--text-dw);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Admin Navbar */
+.admin-navbar {
+  background-color: var(--navy-blue);
+  color: var(--white);
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  z-index: 1040;
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.admin-brand:hover {
+  color: var(--white);
+}
+
+.admin-brand .admin-badge {
+  font-size: 0.7rem;
+  background-color: var(--red);
+  color: var(--white);
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Sidebar */
+.admin-sidebar {
+  width: 250px;
+  background-color: var(--frg-color-light);
+  border-right: 1px solid var(--border-light);
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.admin-sidebar-inner {
+  position: sticky;
+  top: 60px;
+  max-height: calc(100vh - 60px);
+  overflow-y: auto;
+}
+
+.admin-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.92rem;
+  border-left: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.admin-nav-item:hover {
+  background-color: var(--hover-bg);
+  color: var(--blue);
+}
+
+.admin-nav-item.active {
+  background-color: var(--hover-bg);
+  color: var(--blue);
+  font-weight: 700;
+  border-left-color: var(--blue);
+}
+
+.admin-pending-counter {
+  background-color: var(--red);
+  color: var(--white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 10px;
+}
+
+/* Mobile Sidebar Drawer */
+@media (max-width: 991.98px) {
+  .admin-sidebar {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    transform: translateX(-100%);
+    box-shadow: 10px 0 25px rgba(0, 0, 0, 0.2);
+  }
+
+  .admin-sidebar.open {
+    transform: translateX(0);
+  }
+
+  .admin-sidebar-backdrop {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+    z-index: 1045;
+  }
+}
+
+/* Admin Main Content */
+.admin-main {
+  padding: 2rem 1.5rem 3.5rem 1.5rem;
+  overflow-x: hidden;
+}
+
+.admin-header-title {
+  font-weight: 700;
+  font-size: 1.85rem;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.admin-header-subtitle {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin-bottom: 0;
+}
+
+/* Metric Cards */
+.admin-metric-card {
+  background-color: var(--frg-color-light);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 15px var(--shadow);
+  transition: transform 0.2s ease;
+}
+
+.admin-metric-card:hover {
+  transform: translateY(-2px);
+}
+
+.admin-metric-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+.admin-metric-icon.blue {
+  background-color: var(--navy-blue);
+}
+
+.admin-metric-icon.yellow {
+  background-color: #f59e0b;
+}
+
+.admin-metric-icon.green {
+  background-color: #10b981;
+}
+
+.admin-metric-info h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-dw);
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+
+.admin-metric-info span {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+/* Controls Bar */
+.admin-controls-card {
+  background-color: var(--frg-color-light);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.admin-search-input {
+  background-color: var(--bg-color);
+  color: var(--text-dw);
+  border: 1px solid var(--light-gray);
+  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
+}
+
+.admin-search-input:focus {
+  background-color: var(--bg-color);
+  color: var(--text-dw);
+  border-color: var(--blue);
+}
+
+/* Table Container */
+.admin-table-card {
+  background-color: var(--bg-color);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px var(--shadow);
+  overflow: hidden;
+}
+
+.admin-table {
+  width: 100%;
+  margin-bottom: 0;
+  color: var(--text-dw);
+}
+
+.admin-table thead th {
+  background-color: var(--frg-color-light);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border-light);
+  padding: 0.85rem 1rem;
+}
+
+.admin-table tbody td {
+  padding: 0.95rem 1rem;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+  font-size: 0.92rem;
+}
+
+.admin-table tbody tr:hover {
+  background-color: var(--hover-bg);
+}
+
+.admin-catalog-cell {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.admin-catalog-thumb {
+  width: 44px;
+  height: 56px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.admin-status-badge {
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.admin-status-badge.pending {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #b45309;
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.admin-status-badge.sent {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: #047857;
+  border-color: rgba(16, 185, 129, 0.3);
+}
+
+.admin-action-btn {
+  background: transparent;
+  border: 1px solid var(--border-light);
+  color: var(--text-dw);
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  transition: all 0.2s ease;
+  margin-right: 0.35rem;
+}
+
+.admin-action-btn:hover {
+  background-color: var(--hover-bg);
+  border-color: var(--gray-blue);
+}
+
+.admin-action-btn.delete:hover {
+  background-color: #fee2e2;
+  color: #dc2626;
+  border-color: #fca5a5;
+}
+
+/* Empty State */
+.admin-empty-state {
+  text-align: center;
+  padding: 3.5rem 1.5rem;
+  color: var(--text-light);
+}
+
+.admin-empty-icon {
+  font-size: 3.2rem;
+  margin-bottom: 0.75rem;
+  color: var(--gray-blue);
+}

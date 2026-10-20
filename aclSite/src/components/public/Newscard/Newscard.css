@@ -1,0 +1,51 @@
+.card.newscard {
+  border: 0;
+  background: transparent;
+}
+
+.card-img-top {
+  border-radius: 10px;
+}
+
+.card.newscard .card-body {
+  padding: 20px 0 0 0;
+}
+
+span {
+  color: var(--text-dw);
+  font-size: 14px;
+}
+.post-date {
+  margin-left: auto;
+  padding: 5px 8px;
+  background-color: var(--navy-blue);
+  color: var(--white);
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.card-title {
+  color: var(--text-dw);
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card.newscard .btn-more {
+  padding: 10px 0;
+  color: var(--text-dw);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-more svg {
+  transition: all 0.5s ease-in-out;
+}
+
+.card.newscard:hover .btn-more svg {
+  margin-left: 10px;
+}

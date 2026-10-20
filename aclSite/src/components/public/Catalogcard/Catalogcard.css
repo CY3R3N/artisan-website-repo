@@ -1,0 +1,85 @@
+.catalog-card {
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.catalog-card:hover {
+  transform: translateY(-4px);
+}
+
+.catalog-card-action {
+  text-decoration: none;
+  display: block;
+  color: inherit;
+}
+
+.catalog-card .catalog-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  background-color: var(--frg-color);
+}
+
+.catalog-card .catalog-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.catalog-card:hover .catalog-img {
+  transform: scale(1.03);
+}
+
+.catalog-card .catalog-request-overlay {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0, 8, 119, 0.88);
+  color: #ffffff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.25s ease;
+  backdrop-filter: blur(4px);
+}
+
+.catalog-card:hover .catalog-request-overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.catalog-card h4 {
+  color: var(--text-dw);
+  transition: color 0.2s ease;
+}
+
+.catalog-card:hover h4 {
+  color: var(--blue);
+}
+
+.catalog-card h5 {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.catalog-card .action-icon {
+  color: var(--navy-blue);
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.catalog-card:hover .action-icon {
+  color: var(--blue);
+  transform: translateX(2px) translateY(-2px);
+}
